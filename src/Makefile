@@ -63,7 +63,10 @@ clean:
 # Makefiles.
 xpi_built := install.rdf \
              bootstrap.js \
-#             chrome.manifest
+             chrome.manifest \
+             icon.png \
+             $(wildcard skin/*.css) \
+             $(wildcard skin/*.png) \
 
 $(xpi_file): $(xpi_built)
 	@echo "Creating XPI file."
