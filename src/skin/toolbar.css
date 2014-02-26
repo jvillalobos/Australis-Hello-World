@@ -25,4 +25,10 @@
   toolbarpaletteitem[place="palette"] > #aus-hello-button {
     list-style-image: url("chrome://aus-hello/skin/icon32.png");
   }
+
+  /* Necessary to mimic the behavior of all other buttons, which are darker when
+    pressed.
+  #aus-hello-button:hover:active:not([disabled="true"]):not([cui-areatype="menu-panel"]) {
+    list-style-image: url("chrome://aus-hello/skin/icon32-dark.png");
+  }*/
 }

@@ -52,22 +52,21 @@ let AusHello = {
     this._ss.loadAndRegisterSheet(this._uri, this._ss.USER_SHEET);
 
     // create widget and add it to the main toolbar.
-    this._helloButton =
-      CustomizableUI.createWidget(
-        { id : "aus-hello-button",
-          defaultArea : CustomizableUI.AREA_NAVBAR,
-          label : "Hello Button",
-          tooltiptext : "Hello!",
-          onCommand : function(aEvent) {
-            let win = aEvent.target.ownerDocument.defaultView;
+    CustomizableUI.createWidget(
+      { id : "aus-hello-button",
+        defaultArea : CustomizableUI.AREA_NAVBAR,
+        label : "Hello Button",
+        tooltiptext : "Hello!",
+        onCommand : function(aEvent) {
+          let win = aEvent.target.ownerDocument.defaultView;
 
-            win.alert("Hello!");
-          }
-        });
+          win.alert("Hello!");
+        }
+      });
   },
 
   uninit : function() {
-    CustomizableUI.destroyWidget(this._helloButton);
+    CustomizableUI.destroyWidget("aus-hello-button");
 
     if (this._ss.sheetRegistered(this._uri, this._ss.USER_SHEET)) {
       this._ss.unregisterSheet(this._uri, this._ss.USER_SHEET);
