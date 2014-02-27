@@ -15,4 +15,3 @@
 ##
 
 skin      aus-hello  classic/1.0   skin/
-style     chrome://browser/content/browser.xul chrome://aus-hello/skin/toolbar.css
